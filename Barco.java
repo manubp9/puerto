@@ -5,29 +5,60 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Barco
+public abstract class Barco
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String matricula;
+    private float eslora;
+    private int anoFabricacion;
 
     /**
      * Constructor for objects of class Barco
      */
-    public Barco()
+    public Barco(String matricula,float eslora,int anoFabricacion)
     {
-        // initialise instance variables
-        x = 0;
+        this.matricula = matricula;
+        this.eslora =eslora;
+        this.anoFabricacion = anoFabricacion;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * devuelve la matriculacion
      */
-    public int sampleMethod(int y)
+    public String getMatricula()
     {
-        // put your code here
-        return x + y;
+        return matricula;
     }
+
+    /**
+     * devuelve eslora
+     */
+    public float getEslora()
+    {
+        return eslora;
+    }
+
+    /**
+     * devuelve el año de fabricacion
+     */
+    public int anoFabricacion()
+    {
+        return anoFabricacion;
+    }
+
+    /**
+     * devuelve el Coeficiente de Bernua
+     */
+    public abstract int getCoeficienteBernua();
+
+    
+    /**
+     * devuelve como String todos los datos del barco
+     */
+    public String toString()
+    {
+        return "Matricula del barco " + matricula +"\nEslora "+
+        eslora+"\nAño de fabricacion "+anoFabricacion+
+        "\nCoeficiente de Bernua "+getCoeficienteBernua();
+    }
+
 }
