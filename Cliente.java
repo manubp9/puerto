@@ -8,26 +8,41 @@
 public class Cliente
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String nombre;
+    private String dni;
 
     /**
      * Constructor for objects of class Cliente
      */
-    public Cliente()
+    public Cliente(String nombre,String dni)
     {
-        // initialise instance variables
-        x = 0;
+        this.nombre = nombre;
+        this.dni = dni;
+
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @return the name
      */
-    public int sampleMethod(int y)
+    public String getNombre()
     {
         // put your code here
-        return x + y;
+        return nombre;
+    }
+
+    /**
+     * @return the dni
+     */
+    public String getDni()
+    {
+        // put your code here
+        return dni;
+    }
+    /**
+     * escribe en una cadena todos los datos de la clase
+     */
+    public String toString()
+    {
+        return "Nombre "+nombre+"\nDNI "+dni;
     }
 }
